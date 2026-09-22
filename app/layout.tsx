@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://tires-ruddy.vercel.app/"; // reemplazar por el dominio final
-const OG_IMAGE = "/Op1.jpg"; // 1200x630, poner una foto real del local aquí
+const SITE_URL = "https://tires-ruddy.vercel.app"; // sin slash final
+const OG_IMAGE = "/Op1.jpg"; // ver nota abajo sobre tamaño 1200x630
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -65,13 +65,56 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  name: "Golden Tires",
+  image: `${SITE_URL}${OG_IMAGE}`,
+  telephone: "+13053334411",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "581 W 28th St",
+    addressLocality: "Hialeah",
+    addressRegion: "FL",
+    postalCode: "33010",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 25.8473915,
+    longitude: -80.2938876,
+  },
+  url: SITE_URL,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "18:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: "Saturday",
+      opens: "08:00",
+      closes: "16:00",
+    },
+  ],
+  sameAs: ["https://www.instagram.com/goldentires_/"],
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
