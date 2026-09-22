@@ -125,11 +125,11 @@ type Product = {
 };
 
 const PRODUCTS: Product[] = [
-  { id: "turismo", name: "Llantas para turismo", price: null, image: '/tour.jpg', span: "md:col-span-2 md:row-span-2", big: true },
-  { id: "rines", name: "Rines", price: null, image: '/hero2.jpg', span: "md:col-span-2 md:row-span-1" },
-  { id: "suv", name: "SUV y camioneta", price: null, image: "/SUV.jpg", span: "md:col-span-1 md:row-span-1" },
-  { id: "performance", name: "Alto rendimiento", price: null, image: "/high.jpg", span: "md:col-span-1 md:row-span-1" },
-  { id: "servicio", name: "Montaje, balanceo y alineación", price: null, image: "/shop.jpg", span: "md:col-span-4 md:row-span-1", big: true },
+  { id: "turismo", name: "Llantas para turismo", price: null, image: '/tour.webp', span: "md:col-span-2 md:row-span-2", big: true },
+  { id: "rines", name: "Rines", price: null, image: '/hero2.webp', span: "md:col-span-2 md:row-span-1" },
+  { id: "suv", name: "SUV y camioneta", price: null, image: "/SUV.webp", span: "md:col-span-1 md:row-span-1" },
+  { id: "performance", name: "Alto rendimiento", price: null, image: "/high.webp", span: "md:col-span-1 md:row-span-1" },
+  { id: "servicio", name: "Montaje, balanceo y alineación", price: null, image: "/shop.webp", span: "md:col-span-4 md:row-span-1", big: true },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -138,10 +138,10 @@ const PRODUCTS: Product[] = [
 
 const REVIEWS_ARE_PLACEHOLDER = false;
 const REVIEWS = [
-  { quote: "Servicio, amable y rápido. Muy conocedores de lo que hacen. Los recomeniendo al 100%", author: "Jennifer Fulop", image: "/Op3.png" },
-  { quote: "Calidad rapidez y buenos precios y muy buen trato los recomiendo como cliente viejo que soy", author: "Alberto Hernandez Villegas", image: "/Op2.png" },
-  { quote: "Excelente el trabajo de estos muchachos. Rápido, precio excepcional, sin duda de los mejores de Miami.  Te dan precio real y no varía a la hora de cobrarte.", author: "Erislandy Amaya", image: "/Op1.png" },
-  { quote: "Muy buena experiencia te ayudan y el servicio es muy rápido los recomiendo al 100 ..5 estrellas para estos muchachos", author: "Yenier Martinez", image: "/Op4.png" },
+  { quote: "Servicio, amable y rápido. Muy conocedores de lo que hacen. Los recomeniendo al 100%", author: "Jennifer Fulop", image: "/Op3.webp" },
+  { quote: "Calidad rapidez y buenos precios y muy buen trato los recomiendo como cliente viejo que soy", author: "Alberto Hernandez Villegas", image: "/Op2.webp" },
+  { quote: "Excelente el trabajo de estos muchachos. Rápido, precio excepcional, sin duda de los mejores de Miami.  Te dan precio real y no varía a la hora de cobrarte.", author: "Erislandy Amaya", image: "/Op1.webp" },
+  { quote: "Muy buena experiencia te ayudan y el servicio es muy rápido los recomiendo al 100 ..5 estrellas para estos muchachos", author: "Yenier Martinez", image: "/Op4.webp" },
 ];
 
 /* -------------------------------------------------------------------------- */
@@ -378,7 +378,7 @@ export default function Page() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url(/hero3.jpg)",
+              "url(/hero3.webp)",
             backgroundPosition:
               "center",
             backgroundSize:
